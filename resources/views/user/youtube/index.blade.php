@@ -47,7 +47,7 @@
 
 
 								<button  type="submit" name="submit"   class="btn btn-primary pt-2 pb-2" id="article-generate">
-									<i class="fa-sharp fa-solid fa-wand-magic-sparkles mr-2"></i>{{ __('Generate Article 1') }}
+									<i class="fa-sharp fa-solid fa-wand-magic-sparkles mr-2"></i>{{ __('Generate Article 2') }}
 									<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;" id="spinner-article"></span>
 								</button>
 
