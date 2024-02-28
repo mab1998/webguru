@@ -439,18 +439,6 @@
 
 			
 
-			<div id="form-group" class="mb-5 mt-3">
-				<h6 class="fs-11 mb-2 font-weight-semibold">Trascript Tech :</h6>
-				<select id="audio_model" name="lightning" class="form-select">
-					<option value='whisper' selected>Whisper</option>																																																												
-					<option value="youtube_transcript">Youtube Trascript Api</option>
-				</select>
-			</div>
-
-			
-
-		
-
 
 		
 		</div>
@@ -1924,7 +1912,13 @@
                 success: function(response) {
                     // Display success message
                     $messageBox.text(actionType +"==="+ response + ' generated successfully!').show();
-					document.querySelector('.richText-editor').innerHTML=response.body;
+
+					// document.querySelector('#document_title').innerHTML = response.title;
+					document.querySelector('.richText-editor').innerHTML=response.content;
+					document.getElementById('document').value = response.title;
+
+
+
 				},
                 error: function(xhr, status, error) {
                     // Display error message

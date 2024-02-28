@@ -47,7 +47,7 @@
 
 
 								<button  type="submit" name="submit"   class="btn btn-primary pt-2 pb-2" id="article-generate">
-									<i class="fa-sharp fa-solid fa-wand-magic-sparkles mr-2"></i><?php echo e(__('Generate Article')); ?>
+									<i class="fa-sharp fa-solid fa-wand-magic-sparkles mr-2"></i><?php echo e(__('Generate Article 2')); ?>
 
 									<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;" id="spinner-article"></span>
 								</button>
@@ -461,18 +461,6 @@ unset($__errorArgs, $__bag); ?>
 		</div>
 
 			
-
-			<div id="form-group" class="mb-5 mt-3">
-				<h6 class="fs-11 mb-2 font-weight-semibold">Trascript Tech :</h6>
-				<select id="audio_model" name="lightning" class="form-select">
-					<option value='whisper' selected>Whisper</option>																																																												
-					<option value="youtube_transcript">Youtube Trascript Api</option>
-				</select>
-			</div>
-
-			
-
-		
 
 
 		
@@ -1947,7 +1935,13 @@ unset($__errorArgs, $__bag); ?>
                 success: function(response) {
                     // Display success message
                     $messageBox.text(actionType +"==="+ response + ' generated successfully!').show();
-					document.querySelector('.richText-editor').innerHTML=response.body;
+
+					// document.querySelector('#document_title').innerHTML = response.title;
+					document.querySelector('.richText-editor').innerHTML=response.content;
+					document.getElementById('document').value = response.title;
+
+
+
 				},
                 error: function(xhr, status, error) {
                     // Display error message
